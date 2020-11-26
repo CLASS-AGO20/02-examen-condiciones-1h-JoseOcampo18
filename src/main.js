@@ -23,6 +23,31 @@ export default class App {
         }
     }
 
-}
+    puedeCircular(dia, terminacion){
+       if(terminacion == 0 && dia == 1){
+           return true;
+       }
+       else if(terminacion == 0 && dia !== 1){
+           return false;
+       }
+       else if(terminacion == 1 && dia == 2){
+           return true;
+       }
+       else if(terminacion == 1 && dia !== 2){
+        return false;
+    }
+       else if(terminacion == 2 && dia == 3 || dia == 4){
+           return true;
+       }
+       else if(terminacion > 2 && dia < 8){
+           return true;
+       }
+       else{
+           return false;
+       }
+       }
+    }
+
+
 
 let app = new App();
